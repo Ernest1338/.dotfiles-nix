@@ -16,10 +16,7 @@
           "hyprland/window"
         ];
         modules-right = [
-          "custom/suspend" = {
-            format="click me";
-            "on-click"="echo test";
-          }
+          "custom/suspend"
           #"mpd"
           #"idle_inhibitor"
           #"pulseaudio"
@@ -39,6 +36,12 @@
         "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
+        };
+        "custom/suspend" = {
+          format="suspend";
+          on-click=''
+
+          '';
         };
       };
     };
