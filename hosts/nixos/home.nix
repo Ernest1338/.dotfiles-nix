@@ -174,6 +174,18 @@ bind-key -n S-Right next-window
     customPaneNavigationAndResize = true;
   };
 
+  # programs.lazygit = {
+  #   enable = true;
+  #   settings = { };
+  # };
+
+  programs.waybar = {
+    enable = true;
+    settings = {
+
+    };
+  };
+
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = with pkgs; [ ];
 

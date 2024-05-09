@@ -20,6 +20,25 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}") flakeInputs;
   };
 
+  environment.systemPackages = with pkgs; [
+    neovim
+    wget
+    git
+    alacritty
+    greetd.tuigreet
+    htop
+    brave
+    rofi-wayland
+    wl-clipboard
+    python3
+    tmux
+    ripgrep
+    rustup
+    lua-language-server
+    lazygit
+    waybar
+  ];
+
   programs.hyprland.enable = true;
 
   # Bootloader.
@@ -79,26 +98,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    git
-    alacritty
-    greetd.tuigreet
-    htop
-    brave
-    rofi-wayland
-    wl-clipboard
-    python3
-    tmux
-    ripgrep
-    rustup
-    lua-language-server
-    lazygit
-  ];
-
-  environment.sessionVariables = {
-  };
+  environment.sessionVariables = { };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Hack" ]; })

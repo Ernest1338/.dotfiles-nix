@@ -8,3 +8,7 @@ sudo nixos-generate-config --show-hardware-config > ./hosts/nixos/hardware-confi
 ./rebuild.sh
 reboot
 ```
+
+## Notes
+- If neovim has broken treesitter parsers, see :checkhealth nvim-treesitter and install them
+  using `:TSInstall lang`
