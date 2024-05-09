@@ -37,10 +37,18 @@
     lua-language-server
     lazygit
     waybar
-    pipewire
   ];
 
   programs.hyprland.enable = true;
+
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    #jack.enable = true;
+  };
 
   # Bootloader.
   boot.loader.grub.enable = true;
