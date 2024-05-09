@@ -186,11 +186,11 @@ bind-key -n S-Right next-window
       mainBar = {
         layer = "top";
         position = "top";
-        height = 20;
+        height = 30;
         modules-left = [
           "hyprland/workspaces"
           "wlr/taskbar"
-          "custom/media"
+          #"custom/media"
         ];
         modules-center = [
           "hyprland/window"
@@ -203,14 +203,14 @@ bind-key -n S-Right next-window
           #"power-profiles-daemon"
           "cpu"
           "memory"
-          "temperature"
-          "backlight"
-          "keyboard-state"
+          #"temperature"
+          #"backlight"
+          #"keyboard-state"
           #"wlr/language"
-          "battery"
-          "battery#bat2"
+          #"battery"
+          #"battery#bat2"
           "clock"
-          "tray"
+          #"tray"
         ];
         "hyprland/workspaces" = {
           disable-scroll = true;
