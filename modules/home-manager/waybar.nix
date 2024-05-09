@@ -50,8 +50,11 @@ fi
           '';
         };
         "custom/suspend" = {
-          format="<span background='orange'>   ⏸️   </span>";
-          on-click=''systemctl suspend'';
+          format = "<span background='orange'>   ⏸️   </span>";
+          on-click = "systemctl suspend";
+        };
+        "pulseaudio" = {
+          on-click = "pavucontrol";
         };
       };
     };
