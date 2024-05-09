@@ -43,6 +43,7 @@
     waybar
     ncdu
     fd
+    pulseaudio
   ];
 
   home-manager = {
