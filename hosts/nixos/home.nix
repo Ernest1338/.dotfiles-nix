@@ -190,15 +190,15 @@ bind-key -n S-Right next-window
         modules-left = [
           "sway/workspaces"
           "sway/mode"
-          "sway/scratchpad"
-          "custom/media"
+          #"sway/scratchpad"
+          #"custom/media"
         ];
-        modules-center = [
-          "sway/window"
-        ];
+        #modules-center = [
+          #"sway/window"
+        #];
         modules-right = [
-          "mpd"
-          "idle_inhibitor"
+          #"mpd"
+          #"idle_inhibitor"
           #"pulseaudio"
           "network"
           #"power-profiles-daemon"
