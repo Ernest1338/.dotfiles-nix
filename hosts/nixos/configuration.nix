@@ -83,7 +83,7 @@
     dvdnix = {
       isNormalUser = true;
       description = "dvdnix";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "input" ];
       packages = with pkgs; [];
     };
   };

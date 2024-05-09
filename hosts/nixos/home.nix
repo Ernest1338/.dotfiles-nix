@@ -206,7 +206,7 @@ bind-key -n S-Right next-window
           "temperature"
           "backlight"
           "keyboard-state"
-          "wlr/language"
+          #"wlr/language"
           "battery"
           "battery#bat2"
           "clock"
