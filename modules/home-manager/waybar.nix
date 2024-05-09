@@ -39,7 +39,7 @@
           all-outputs = true;
         };
         "custom/sound-switch" = {
-          format = "🎧";
+          format = "<span>   🎧   </span>";
           on-click = ''
 current=$(pactl list sinks | grep 'Active Port:' | grep 'analog' | cut -d' ' -f3)
 if [[ $current == "analog-output-lineout" ]]; then
@@ -50,7 +50,7 @@ fi
           '';
         };
         "custom/suspend" = {
-          format="⏸️";
+          format="<span>   ⏸️   </span>";
           on-click=''systemctl suspend'';
         };
       };
