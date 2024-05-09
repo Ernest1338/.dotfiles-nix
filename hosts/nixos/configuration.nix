@@ -37,6 +37,7 @@
     lua-language-server
     lazygit
     waybar
+    pipewire
   ];
 
   programs.hyprland.enable = true;
