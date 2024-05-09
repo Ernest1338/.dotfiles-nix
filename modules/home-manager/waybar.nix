@@ -56,6 +56,9 @@ fi
         "pulseaudio" = {
           on-click = "pavucontrol";
         };
+        "clock" = {
+          on-click = "alacritty -e sh -c 'cal $(date +%Y); read'";
+        };
       };
     };
   };
