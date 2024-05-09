@@ -37,6 +37,7 @@
     lua-language-server
     lazygit
     waybar
+    ncdu
   ];
 
   programs.hyprland.enable = true;
