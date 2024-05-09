@@ -50,7 +50,7 @@ fi
           '';
         };
         "custom/suspend" = {
-          format="suspend";
+          format="⏸️";
           on-click=''systemctl suspend'';
         };
       };
