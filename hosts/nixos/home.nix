@@ -182,7 +182,7 @@ bind-key -n S-Right next-window
   programs.waybar = {
     enable = true;
     settings = {
-
+      systemd.enable = true;
     };
   };
 
