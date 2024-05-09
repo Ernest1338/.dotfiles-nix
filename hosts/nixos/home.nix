@@ -189,7 +189,7 @@ bind-key -n S-Right next-window
         height = 30;
         modules-left = [
           "hyprland/workspaces"
-          "wlr/taskbar"
+          #"wlr/taskbar"
           #"custom/media"
         ];
         modules-center = [
