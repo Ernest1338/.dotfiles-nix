@@ -181,8 +181,8 @@ bind-key -n S-Right next-window
 
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
     settings = {
-      systemd.enable = true;
       mainBar = {
         layer = "top";
         position = "top";
