@@ -44,6 +44,7 @@
     ncdu
     fd
     pulseaudio
+    xfce.thunar
   ];
 
   home-manager = {
