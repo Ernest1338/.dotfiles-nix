@@ -60,11 +60,12 @@
       ];
       bind = [
         "$mod, Return, exec, $terminal"
-        "$mod SHIFT, Return, exec, $terminal"
+        "$mod Shift, Return, exec, $terminal"
         "$mod, Q, killactive"
         "$mod, M, exit"
         "$mod, W, togglefloating"
         "$mod, P, exec, $menu"
+        "$mod, Space, exec, $menu"
         "Ctrl, Space, exec, $window_switcher"
         "Alt, Tab, cyclenext"
         "Alt, Tab, bringactivetotop"

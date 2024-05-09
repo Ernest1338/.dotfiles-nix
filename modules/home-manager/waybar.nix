@@ -16,6 +16,10 @@
           "hyprland/window"
         ];
         modules-right = [
+          "custom/suspend" = {
+            format="click me";
+            "on-click"="echo test";
+          }
           #"mpd"
           #"idle_inhibitor"
           #"pulseaudio"
