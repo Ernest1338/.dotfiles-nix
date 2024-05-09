@@ -188,14 +188,14 @@ bind-key -n S-Right next-window
         position = "top";
         height = 30;
         modules-left = [
-          "sway/workspaces"
-          "sway/mode"
-          #"sway/scratchpad"
-          #"custom/media"
+          "hyprland/workspaces"
+          "hyprland/mode"
+          "hyprland/scratchpad"
+          "custom/media"
         ];
-        #modules-center = [
-          #"sway/window"
-        #];
+        modules-center = [
+          "hyprland/window"
+        ];
         modules-right = [
           #"mpd"
           #"idle_inhibitor"
@@ -213,7 +213,7 @@ bind-key -n S-Right next-window
           "clock"
           "tray"
         ];
-        "sway/workspaces" = {
+        "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
         };
