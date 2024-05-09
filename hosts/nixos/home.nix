@@ -223,10 +223,10 @@ bind-key -n S-Right next-window
   };
 
   programs.git = {
-    extraConfig = ''
-[credential]
-	helper = store
-    '';
+    enable = true;
+    extraConfig = {
+      credential.helper = "store";
+    };
   };
 
   # The home.packages option allows you to install Nix packages into your environment.
