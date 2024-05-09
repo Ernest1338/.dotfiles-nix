@@ -168,33 +168,10 @@ export PS1="\[$(tput bold)\]\[\033[38;5;0m\]\[\033[48;5;11m\]\u\[$(tput sgr0)\] 
     extraConfig = ''
 set -g status-style 'bg=#282828'
 setw -g window-status-current-style 'fg=black,bg=gray'
+bind-key -n S-Left previous-window
+bind-key -n S-Right next-window
     '';
     customPaneNavigationAndResize = true;
-    #tmuxConf = ''
-#set -g mouse on
-## set -g status-position top
-#set -g status-style 'bg=#282828'
-#setw -g window-status-current-style 'fg=black,bg=gray'
-## setw -g window-status-current-style 'fg=gray,bg=#222738'
-#
-## C-s instead of C-b
-#set -g prefix C-s
-#
-## act like vim
-#setw -g mode-keys vi
-#bind-key h select-pane -L
-#bind-key j select-pane -D
-#bind-key k select-pane -U
-#bind-key l select-pane -R
-#
-#bind-key -n S-Left previous-window
-#bind-key -n S-Right next-window
-#
-## from neovim checkhealth
-#set-option -sg escape-time 5
-#set-option -g focus-events on
-#set-option -sa terminal-features ',alacritty:RGB'
-    #'';
   };
 
   # The home.packages option allows you to install Nix packages into your environment.
