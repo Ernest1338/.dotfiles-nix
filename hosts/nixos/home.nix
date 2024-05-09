@@ -186,9 +186,10 @@ bind-key -n S-Right next-window
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
+        height = 20;
         modules-left = [
           "hyprland/workspaces"
+          "hyprland/taskbar"
           "hyprland/mode"
           "hyprland/scratchpad"
           "custom/media"
