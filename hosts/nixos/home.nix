@@ -190,7 +190,6 @@ bind-key -n S-Right next-window
         modules-left = [
           "hyprland/workspaces"
           "wlr/taskbar"
-          "wlr/mode"
           "custom/media"
         ];
         modules-center = [
@@ -207,7 +206,7 @@ bind-key -n S-Right next-window
           "temperature"
           "backlight"
           "keyboard-state"
-          "sway/language"
+          "wlr/language"
           "battery"
           "battery#bat2"
           "clock"
