@@ -92,6 +92,8 @@
     python3
     tmux
     ripgrep
+    rustup
+    lua-language-server
   ];
 
   environment.sessionVariables = {
