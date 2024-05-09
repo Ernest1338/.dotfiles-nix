@@ -15,15 +15,15 @@
       "$window_switcher" = "rofi -show window";
       "monitor" = ",preferred,auto,auto";
       general = {
-        border_size = 2;
-        gaps_in = 5;
-        gaps_out = 5;
+        border_size = 1;
+        gaps_in = 4;
+        gaps_out = 4;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
       };
       decoration = {
-        rounding = 10;
+        rounding = 5;
         blur = {
           enabled = false;
           size = 3;
@@ -186,7 +186,7 @@ bind-key -n S-Right next-window
       mainBar = {
         layer = "top";
         position = "top";
-        height = 20;
+        height = 15;
         modules-left = [
           "hyprland/workspaces"
           #"wlr/taskbar"
