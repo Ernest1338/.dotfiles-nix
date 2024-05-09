@@ -39,16 +39,19 @@
           all-outputs = true;
         };
         "custom/sound-switch" = {
-          format = "sound-switch";
+          format = "🎧";
           on-click = ''
-
+current=$(pactl list sinks | grep 'Active Port:' | grep 'analog' | cut -d' ' -f3)
+if [[ $current == "analog-output-lineout" ]]; then
+    pactl set-sink-port 0 analog-output-headphones
+elif [[ $current == "analog-output-headphones" ]]; then
+    pactl set-sink-port 0 analog-output-lineout
+fi
           '';
         };
         "custom/suspend" = {
           format="suspend";
-          on-click=''
-
-          '';
+          on-click=''systemctl suspend'';
         };
       };
     };

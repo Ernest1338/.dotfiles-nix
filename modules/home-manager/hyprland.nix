@@ -59,7 +59,7 @@
         "$mod, mouse:273, resizewindow"
       ];
       bind = [
-        "$mod, Return, exec, $terminal"
+        "$mod Ctrl, T, exec, $terminal"
         "$mod Shift, Return, exec, $terminal"
         "$mod, Q, killactive"
         "$mod, M, exit"
