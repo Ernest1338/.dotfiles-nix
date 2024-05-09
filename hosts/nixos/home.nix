@@ -183,6 +183,19 @@ bind-key -n S-Right next-window
     enable = true;
     settings = {
       systemd.enable = true;
+      mainBar = {
+        layer = "top";
+        position = "top";
+        height = 30;
+        modules-left = [ "sway/workspaces" "sway/mode" "wlr/taskbar" ];
+        modules-center = [ "sway/window" "custom/hello-from-waybar" ];
+        modules-right = [ "mpd" "custom/mymodule#with-css-id" "temperature" ];
+
+        "sway/workspaces" = {
+          disable-scroll = true;
+          all-outputs = true;
+        };
+      };
     };
   };
 
