@@ -163,6 +163,12 @@ export PS1="\[$(tput bold)\]\[\033[38;5;0m\]\[\033[48;5;11m\]\u\[$(tput sgr0)\] 
   programs.tmux = {
     enable = true;
     mouse = true;
+    keyMode = "vi";
+    prefix = "C-s";
+    extraConfig = ''
+set -g status-style 'bg=#282828'
+setw -g window-status-current-style 'fg=black,bg=gray'
+    '';
     #tmuxConf = ''
 #set -g mouse on
 ## set -g status-position top
