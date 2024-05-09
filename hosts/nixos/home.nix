@@ -199,9 +199,9 @@ bind-key -n S-Right next-window
         modules-right = [
           "mpd"
           "idle_inhibitor"
-          #"pulseaudio"
+          "pulseaudio"
           "network"
-          "power-profiles-daemon"
+          #"power-profiles-daemon"
           "cpu"
           "memory"
           "temperature"
