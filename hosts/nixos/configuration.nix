@@ -4,20 +4,23 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/nixos/nix.nix
+      ../../modules/nixos/bootloader.nix
+      ../../modules/nixos/input.nix
+      ../../modules/nixos/locale.nix
+      ../../modules/nixos/fonts.nix
+      ../../modules/nixos/networking.nix
       inputs.home-manager.nixosModules.default
     ];
 
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-    settings = {
-      experimental-features = "nix-command flakes";
-      flake-registry = "";
-      nix-path = config.nix.nixPath;
+  networking.hostName = "nixos";
+  users.users = {
+    dvdnix = {
+      isNormalUser = true;
+      description = "dvdnix";
+      extraGroups = [ "networkmanager" "wheel" "input" ];
+      packages = with pkgs; [];
     };
-    channel.enable = false;
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}") flakeInputs;
   };
 
   environment.systemPackages = with pkgs; [
@@ -40,8 +43,16 @@
     ncdu
   ];
 
-  programs.hyprland.enable = true;
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "dvdnix" = import ./home.nix;
+    };
+  };
 
+  environment.sessionVariables = { };
+
+  programs.hyprland.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -51,44 +62,6 @@
     #jack.enable = true;
   };
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-  networking.hostName = "nixos";
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "Europe/Warsaw";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "pl_PL.UTF-8";
-    LC_IDENTIFICATION = "pl_PL.UTF-8";
-    LC_MEASUREMENT = "pl_PL.UTF-8";
-    LC_MONETARY = "pl_PL.UTF-8";
-    LC_NAME = "pl_PL.UTF-8";
-    LC_NUMERIC = "pl_PL.UTF-8";
-    LC_PAPER = "pl_PL.UTF-8";
-    LC_TELEPHONE = "pl_PL.UTF-8";
-    LC_TIME = "pl_PL.UTF-8";
-  };
-
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  users.users = {
-    dvdnix = {
-      isNormalUser = true;
-      description = "dvdnix";
-      extraGroups = [ "networkmanager" "wheel" "input" ];
-      packages = with pkgs; [];
-    };
-  };
-
   services.greetd = {
     enable = true;
     settings = {
@@ -96,28 +69,6 @@
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --user-menu --cmd Hyprland";
         user = "greeter";
       };
-    };
-  };
-
-  nixpkgs = {
-    overlays = [
-
-    ];
-    config = {
-      allowUnfree = true;
-    };
-  };
-
-  environment.sessionVariables = { };
-
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hack" ]; })
-  ];
-
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "dvdnix" = import ./home.nix;
     };
   };
 
