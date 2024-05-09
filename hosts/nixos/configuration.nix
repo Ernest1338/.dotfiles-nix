@@ -11,6 +11,7 @@
       ../../modules/nixos/fonts.nix
       ../../modules/nixos/networking.nix
       ../../modules/nixos/sound.nix
+      ../../modules/nixos/thunar.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -44,7 +45,6 @@
     ncdu
     fd
     pulseaudio
-    xfce.thunar
     hyprlock
   ];
 
