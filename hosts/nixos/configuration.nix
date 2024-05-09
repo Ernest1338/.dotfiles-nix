@@ -47,6 +47,7 @@
     lazygit
     waybar
     ncdu
+    fd
   ];
 
   home-manager = {
