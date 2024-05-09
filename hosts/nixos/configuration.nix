@@ -10,14 +10,9 @@
       ../../modules/nixos/locale.nix
       ../../modules/nixos/fonts.nix
       ../../modules/nixos/networking.nix
+      ../../modules/nixos/sound.nix
       inputs.home-manager.nixosModules.default
     ];
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
 
   networking.hostName = "nixos";
   users.users = {
@@ -60,14 +55,6 @@
   environment.sessionVariables = { };
 
   programs.hyprland.enable = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    #jack.enable = true;
-  };
 
   services.greetd = {
     enable = true;

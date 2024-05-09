@@ -16,6 +16,7 @@
           "hyprland/window"
         ];
         modules-right = [
+          "custom/sound-switch"
           "custom/suspend"
           #"mpd"
           #"idle_inhibitor"
@@ -36,6 +37,12 @@
         "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
+        };
+        "custom/sound-switch" = {
+          format = "sound-switch";
+          on-click = ''
+
+          '';
         };
         "custom/suspend" = {
           format="suspend";
