@@ -4,6 +4,7 @@
   in {
     settings = {
       experimental-features = "nix-command flakes";
+      warn-dirty = false;
       flake-registry = "";
       nix-path = config.nix.nixPath;
     };

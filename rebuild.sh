@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-pushd ~/.dotfiles/
+pushd ~/.dotfiles/ &>/dev/null
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."
 git add .
@@ -17,4 +17,4 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     git push
 fi
-popd
+popd &>/dev/null
