@@ -56,6 +56,9 @@ fi
         "pulseaudio" = {
           on-click = "pavucontrol";
         };
+        "network" = {
+          on-click = "alacritty -e sh -c 'nmtui'";
+        };
         "clock" = {
           on-click = "alacritty -e sh -c 'cal $(date +%Y); read'";
         };
