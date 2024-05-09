@@ -187,10 +187,32 @@ bind-key -n S-Right next-window
         layer = "top";
         position = "top";
         height = 30;
-        modules-left = [ "sway/workspaces" "sway/mode" "wlr/taskbar" ];
-        modules-center = [ "sway/window" "custom/hello-from-waybar" ];
-        modules-right = [ "mpd" "custom/mymodule#with-css-id" "temperature" ];
-
+        modules-left = [
+          "sway/workspaces"
+          "sway/mode"
+          "sway/scratchpad"
+          "custom/media"
+        ];
+        modules-center = [
+          "sway/window"
+        ];
+        modules-right = [
+          "mpd"
+          "idle_inhibitor"
+          "pulseaudio"
+          "network"
+          "power-profiles-daemon"
+          "cpu"
+          "memory"
+          "temperature"
+          "backlight"
+          "keyboard-state"
+          "sway/language"
+          "battery"
+          "battery#bat2"
+          "clock"
+          "tray"
+        ];
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
