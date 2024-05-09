@@ -20,7 +20,7 @@
           "custom/suspend"
           #"mpd"
           #"idle_inhibitor"
-          #"pulseaudio"
+          "pulseaudio"
           "network"
           #"power-profiles-daemon"
           "cpu"

@@ -45,6 +45,7 @@
     ncdu
     fd
     pulseaudio
+    pavucontrol
     hyprlock
   ];
 
