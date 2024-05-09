@@ -94,6 +94,7 @@
     ripgrep
     rustup
     lua-language-server
+    lazygit
   ];
 
   environment.sessionVariables = {
