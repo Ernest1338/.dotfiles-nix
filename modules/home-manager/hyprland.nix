@@ -69,6 +69,7 @@
         "Ctrl, Space, exec, $window_switcher"
         "Alt, Tab, cyclenext"
         "Alt, Tab, bringactivetotop"
+        "Super, L, exec, hyprlock"
 
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"

@@ -45,6 +45,7 @@
     fd
     pulseaudio
     xfce.thunar
+    hyprlock
   ];
 
   home-manager = {
