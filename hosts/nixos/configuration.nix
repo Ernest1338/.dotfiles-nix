@@ -48,6 +48,7 @@
     pavucontrol
     hyprlock
     uv
+    ruff
   ];
 
   home-manager = {
