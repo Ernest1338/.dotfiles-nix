@@ -15,6 +15,7 @@
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/screenshotting.nix
     ../../modules/home-manager/imv.nix
+    ../../modules/home-manager/mako.nix
     #../../modules/home-manager/qt.nix
     #../../modules/home-manager/gtk.nix
     #../../modules/home-manager/dconf.nix
