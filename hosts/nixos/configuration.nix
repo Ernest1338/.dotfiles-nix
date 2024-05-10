@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ../../modules/nixos/nix.nix
       ../../modules/nixos/bootloader.nix
@@ -13,7 +13,6 @@
       ../../modules/nixos/networking.nix
       ../../modules/nixos/sound.nix
       ../../modules/nixos/display-manager.nix
-      #../../modules/nixos/thunar.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -34,7 +33,6 @@
     };
   };
 
-  programs.hyprland.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ ];
 
