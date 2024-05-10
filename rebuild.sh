@@ -4,6 +4,7 @@ set -e
 pushd ~/.dotfiles/ &>/dev/null
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."
+git pull
 git add .
 sudo nixos-rebuild switch --cores $(nproc) --flake . || exit 1
 gen=$(nixos-rebuild list-generations | grep current)
