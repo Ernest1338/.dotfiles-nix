@@ -13,6 +13,7 @@
       ../../modules/nixos/networking.nix
       ../../modules/nixos/sound.nix
       ../../modules/nixos/thunar.nix
+      ../../modules/nixos/display-manager.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -33,20 +34,7 @@
     };
   };
 
-  environment.sessionVariables = { };
-
   programs.hyprland.enable = true;
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --user-menu --cmd Hyprland";
-        user = "greeter";
-      };
-    };
-  };
-
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ ];
 

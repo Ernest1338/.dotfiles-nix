@@ -4,7 +4,6 @@
     wget
     git
     alacritty
-    greetd.tuigreet
     htop
     brave
     rofi-wayland
