@@ -34,7 +34,7 @@
           "myBezier, 0.65, 0, 0.35, 1"
         ];
         animation = [
-          #"windows, 1, 3, myBezier"
+          #"windows, 1, 7, myBezier"
           "windowsOut, 1, 7, default, popin 80%"
           "border, 1, 10, default"
           "borderangle, 1, 8, default"

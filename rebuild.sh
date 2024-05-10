@@ -2,7 +2,7 @@
 
 set -e
 pushd ~/.dotfiles/ &>/dev/null
-git diff -U0 *.nix
+git diff
 echo "NixOS Rebuilding..."
 git pull
 git add .
