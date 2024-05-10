@@ -16,6 +16,6 @@
     ruff
     qemu
     ffmpeg
-    rofi-wayland
+    rofi-wayland # TODO: configure with home-manager (maybe just rofi, not rofi-wayland?)
   ];
 }
