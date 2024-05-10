@@ -11,6 +11,8 @@
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/alacritty.nix
     ../../modules/home-manager/waybar.nix
+    ../../modules/home-manager/pcmanfm.nix
+    ../../modules/home-manager/mpv.nix
     #../../modules/home-manager/qt.nix
     #../../modules/home-manager/gtk.nix
     #../../modules/home-manager/dconf.nix

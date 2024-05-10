@@ -13,27 +13,22 @@
           #"wlr/taskbar"
           #"custom/media"
         ];
-        modules-center = [
-          "hyprland/window"
-        ];
+        modules-center = [ "hyprland/window" ];
         modules-right = [
           "custom/sound-switch"
           "custom/suspend"
-          #"mpd"
-          #"idle_inhibitor"
+          "hyprland/language"
+          "idle_inhibitor"
           "pulseaudio"
           "network"
-          #"power-profiles-daemon"
+          "power-profiles-daemon"
           "cpu"
           "memory"
-          #"temperature"
-          #"backlight"
-          #"keyboard-state"
-          #"wlr/language"
-          #"battery"
-          #"battery#bat2"
+          "temperature"
+          "backlight"
+          "battery"
+          "tray"
           "clock"
-          #"tray"
         ];
         "hyprland/workspaces" = {
           disable-scroll = true;

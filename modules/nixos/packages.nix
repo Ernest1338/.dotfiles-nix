@@ -4,7 +4,6 @@
     wget
     htop
     brave
-    rofi-wayland
     wl-clipboard
     python3
     ripgrep
@@ -16,5 +15,7 @@
     uv
     ruff
     qemu
+    ffmpeg
+    rofi-wayland
   ];
 }

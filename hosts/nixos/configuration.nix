@@ -12,8 +12,8 @@
       ../../modules/nixos/fonts.nix
       ../../modules/nixos/networking.nix
       ../../modules/nixos/sound.nix
-      ../../modules/nixos/thunar.nix
       ../../modules/nixos/display-manager.nix
+      #../../modules/nixos/thunar.nix
       inputs.home-manager.nixosModules.default
     ];
 
