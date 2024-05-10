@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       font = {
-        size = 11.5;
+        size = 11;
       };
       font.normal = {
         family = "Hack Nerd Font";
