@@ -3,7 +3,6 @@
     neovim
     wget
     git
-    alacritty
     htop
     brave
     rofi-wayland
