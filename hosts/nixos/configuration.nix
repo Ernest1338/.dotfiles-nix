@@ -47,6 +47,7 @@
     pulseaudio
     pavucontrol
     hyprlock
+    uv
   ];
 
   home-manager = {
