@@ -15,5 +15,6 @@
     fd
     uv
     ruff
+    qemu
   ];
 }
