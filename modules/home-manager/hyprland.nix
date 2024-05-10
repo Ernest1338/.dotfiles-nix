@@ -70,6 +70,7 @@
         "Alt, Tab, cyclenext"
         "Alt, Tab, bringactivetotop"
         "Super, L, exec, hyprlock"
+        #"Print, exec, grim -g \"$(slurp)\"" # TODO
 
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
