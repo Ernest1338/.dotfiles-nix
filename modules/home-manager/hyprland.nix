@@ -5,8 +5,7 @@
     settings = {
       "$mod" = "ALT";
       "$terminal" = "alacritty";
-      "$menu" = "rofi -show drun";
-      "$window_switcher" = "rofi -show window";
+      "$menu" = "fuzzel";
       "monitor" = ",preferred,auto,auto";
       general = {
         border_size = 1;
@@ -68,7 +67,6 @@
         "$mod, F, togglefloating"
         "$mod, P, exec, $menu"
         "$mod, Space, exec, $menu"
-        "Ctrl, Space, exec, $window_switcher"
         "Alt, Tab, cyclenext"
         "Alt, Tab, bringactivetotop"
         "Super, L, exec, hyprlock"
