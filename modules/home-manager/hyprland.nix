@@ -63,6 +63,7 @@
             ];
             bind = [
                 "$mod Ctrl, T, exec, $terminal"
+                "$mod, Return, exec, $terminal"
                 "$mod Shift, Return, exec, $terminal"
                 "$mod, Q, killactive"
                 "$mod, M, exit"
