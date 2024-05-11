@@ -1,10 +1,10 @@
 { lib, pkgs, ... }: {
     gtk = {
         enable = true;
-        theme = {
-            name = "orchis-theme";
-            package = pkgs.orchis-theme;
-        };
+        #theme = {
+        #    name = "orchis-theme";
+        #    package = pkgs.orchis-theme;
+        #};
         iconTheme = {
             name = "Adwaita";
             package = pkgs.gnome.adwaita-icon-theme;
