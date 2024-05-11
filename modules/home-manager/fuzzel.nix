@@ -8,6 +8,7 @@
                 selection = "504945ff";
                 selection-text = "fbf1c7ff";
                 text = "ebdbb2ff";
+                border = "1d2021ff";
             };
         };
     };
