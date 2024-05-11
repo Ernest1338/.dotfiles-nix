@@ -1,3 +1,3 @@
 { lib, pkgs, ... }: {
-  home.packages = with pkgs; [ pcmanfm ];
+    home.packages = with pkgs; [ pcmanfm ];
 }
