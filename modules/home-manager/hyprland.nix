@@ -1,5 +1,8 @@
 { lib, pkgs, ... }: {
-  home.packages = with pkgs; [ hyprlock ];
+  home.packages = with pkgs; [
+    hyprland
+    hyprlock
+  ];
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {

@@ -17,9 +17,9 @@
     ../../modules/home-manager/imv.nix
     ../../modules/home-manager/mako.nix
     ../../modules/home-manager/cursor.nix
-    #../../modules/home-manager/qt.nix
-    #../../modules/home-manager/gtk.nix
-    #../../modules/home-manager/dconf.nix
+    ../../modules/home-manager/qt.nix
+    ../../modules/home-manager/gtk.nix
+    ../../modules/home-manager/dconf.nix
   ];
 
   home.sessionVariables = {
