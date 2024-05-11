@@ -7,21 +7,25 @@
     imports = [
         ../../modules/home-manager/bash.nix
         ../../modules/home-manager/git.nix
-        ../../modules/home-manager/hyprland.nix
         ../../modules/home-manager/tmux.nix
         ../../modules/home-manager/alacritty.nix
-        #../../modules/home-manager/waybar.nix
-        ../../modules/home-manager/yambar.nix
         ../../modules/home-manager/thunar.nix
         ../../modules/home-manager/mpv.nix
-        ../../modules/home-manager/screenshotting.nix
         ../../modules/home-manager/imv.nix
         ../../modules/home-manager/mako.nix
         ../../modules/home-manager/neovim.nix
         ../../modules/home-manager/fuzzel.nix
+
+        ../../modules/home-manager/hyprland.nix
+        ../../modules/home-manager/waybar.nix
+        #../../modules/home-manager/river.nix
+        #../../modules/home-manager/yambar.nix
+
+        ../../modules/home-manager/screenshotting.nix
         ../../modules/home-manager/cursor.nix
-        ../../modules/home-manager/gtk.nix
         ../../modules/home-manager/dconf.nix
+        ../../modules/home-manager/gtk.nix
+        #../../modules/home-manager/qt.nix
     ];
 
     home.sessionVariables = {
