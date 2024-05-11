@@ -3,5 +3,4 @@
     grim
     slurp
   ];
-  # TODO: config
 }
