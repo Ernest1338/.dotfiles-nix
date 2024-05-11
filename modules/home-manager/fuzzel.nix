@@ -10,6 +10,9 @@
                 text = "ebdbb2ff";
                 border = "1d2021ff";
             };
+            main = {
+                width = 50;
+            };
         };
     };
 }
