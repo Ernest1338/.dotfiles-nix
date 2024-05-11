@@ -14,8 +14,8 @@
                 width = 50;
             };
             key-bindings = {
-                prev-with-wrap = "Up Control+k";
-                next-with-wrap = "Down Control+j";
+                prev-with-wrap = "Up Shift+Tab";
+                next-with-wrap = "Down Tab";
             };
         };
     };

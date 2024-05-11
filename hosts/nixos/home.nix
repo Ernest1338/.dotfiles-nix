@@ -10,7 +10,8 @@
         ../../modules/home-manager/hyprland.nix
         ../../modules/home-manager/tmux.nix
         ../../modules/home-manager/alacritty.nix
-        ../../modules/home-manager/waybar.nix
+        #../../modules/home-manager/waybar.nix
+        ../../modules/home-manager/yambar.nix
         ../../modules/home-manager/thunar.nix
         ../../modules/home-manager/mpv.nix
         ../../modules/home-manager/screenshotting.nix
