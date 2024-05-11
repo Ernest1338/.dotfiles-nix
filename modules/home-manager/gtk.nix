@@ -13,4 +13,7 @@
             gtk-application-prefer-dark-theme = true;
         };
     };
+    home.sessionVariables = {
+        GTK_THEME = "Adwaita:dark";
+    };
 }
