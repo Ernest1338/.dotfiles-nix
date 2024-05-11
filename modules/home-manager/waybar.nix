@@ -2,7 +2,10 @@
     home.packages = with pkgs; [ waybar ];
     programs.waybar = {
         enable = true;
-        systemd.enable = true;
+        systemd = {
+            enable = true;
+            target = "graphical-session.target";
+        };
         settings = {
             mainBar = {
                 layer = "top";
