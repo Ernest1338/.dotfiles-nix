@@ -11,7 +11,7 @@
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/alacritty.nix
     ../../modules/home-manager/waybar.nix
-    ../../modules/home-manager/pcmanfm.nix
+    ../../modules/home-manager/thunar.nix
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/screenshotting.nix
     ../../modules/home-manager/imv.nix
