@@ -13,8 +13,7 @@
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
-                    #"wlr/taskbar"
-                    #"custom/media"
+                    "tray"
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
@@ -29,13 +28,18 @@
                     "memory"
                     #"temperature"
                     #"backlight"
-                    #"battery"
-                    #"tray"
+                    "battery"
                     "clock"
                 ];
                 "hyprland/workspaces" = {
-                    disable-scroll = true;
-                    all-outputs = true;
+                    #disable-scroll = true;
+                    #all-outputs = true;
+                    format = "{icon}";
+                    format-icons = {
+                        default = "○";
+                        active = "⊚";
+                        urgent = "⊚";
+                    };
                 };
                 "custom/sound-switch" = {
                     format = "<span background='lightgray'>   🎧   </span>";
@@ -53,12 +57,16 @@ fi
                     on-click = "systemctl suspend";
                 };
                 "pulseaudio" = {
+                    format = "🔊 {1}%";
                     on-click = "pavucontrol";
                 };
                 "network" = {
+                    format = "🛜 {0}";
                     on-click = "alacritty -e sh -c 'nmtui'";
                 };
                 "clock" = {
+                    #format = "<b>📆 {:%d/%m 🕐 %H:%M}</b>";
+                    format = "📆 {:%d/%m 🕐 %H:%M}";
                     on-click = "alacritty -e sh -c 'cal $(date +%Y); read'";
                 };
             };
