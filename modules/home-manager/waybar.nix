@@ -63,7 +63,7 @@ fi
                     on-click = "pavucontrol";
                 };
                 "network" = {
-                    format = "  {0}";
+                    format = "  {0}"; # TODO
                     on-click = "alacritty -e sh -c 'nmtui'";
                 };
                 "clock" = {
@@ -72,10 +72,10 @@ fi
                     on-click = "alacritty -e sh -c 'cal $(date +%Y); read'";
                 };
                 "memory" = {
-                    format = " {0}";
+                    format = "  {0}%";
                 };
                 "cpu" = {
-                    format = "  {0}";
+                    format = "  {1}%";
                 };
             };
         };
