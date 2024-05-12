@@ -42,7 +42,8 @@
                     };
                 };
                 "custom/sound-switch" = {
-                    format = "<span background='lightgray'>   🎧   </span>";
+                    #format = "<span background='lightgray'>   🎧   </span>";
+                    format = "<span>   🎧   </span>";
                     on-click = ''
 current=$(pactl list sinks | grep 'Active Port:' | grep 'analog' | cut -d' ' -f3)
 if [[ $current == "analog-output-lineout" ]]; then
@@ -53,7 +54,8 @@ fi
                     '';
                 };
                 "custom/suspend" = {
-                    format = "<span background='orange'>   ⏸️   </span>";
+                    #format = "<span background='orange'>   ⏸️   </span>";
+                    format = "<span>   ⏸️   </span>";
                     on-click = "systemctl suspend";
                 };
                 "pulseaudio" = {
@@ -71,5 +73,34 @@ fi
                 };
             };
         };
+        style = ''
+/*
+window#waybar {
+    background: transparent;
+    border-bottom: none;
+}
+*/
+* {
+    font-size: 12px;
+    font-family: Hack Nerd Font;
+    color: white;
+    font-weight: bold;
+}
+#network {
+    background: transparent;
+}
+#pulseaudio {
+    background: transparent;
+}
+#cpu {
+    background: transparent;
+}
+#memory {
+    background: transparent;
+}
+#clock {
+    background: transparent;
+}
+        '';
     };
 }
