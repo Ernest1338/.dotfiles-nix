@@ -43,7 +43,7 @@
                 };
                 "custom/sound-switch" = {
                     #format = "<span background='lightgray'>   🎧   </span>";
-                    format = "<span>   🎧   </span>";
+                    format = "<span>    </span>";
                     on-click = ''
 current=$(pactl list sinks | grep 'Active Port:' | grep 'analog' | cut -d' ' -f3)
 if [[ $current == "analog-output-lineout" ]]; then
@@ -55,21 +55,27 @@ fi
                 };
                 "custom/suspend" = {
                     #format = "<span background='orange'>   ⏸️   </span>";
-                    format = "<span>   ⏸️   </span>";
+                    format = "<span>    </span>";
                     on-click = "systemctl suspend";
                 };
                 "pulseaudio" = {
-                    format = "🔊 {1}%";
+                    format = "  {1}%";
                     on-click = "pavucontrol";
                 };
                 "network" = {
-                    format = "🛜 {0}";
+                    format = "  {0}";
                     on-click = "alacritty -e sh -c 'nmtui'";
                 };
                 "clock" = {
                     #format = "<b>📆 {:%d/%m 🕐 %H:%M}</b>";
-                    format = "📆 {:%d/%m 🕐 %H:%M}";
+                    format = "  {:%d/%m    %H:%M}";
                     on-click = "alacritty -e sh -c 'cal $(date +%Y); read'";
+                };
+                "memory" = {
+                    format = " {0}";
+                };
+                "cpu" = {
+                    format = "  {0}";
                 };
             };
         };
