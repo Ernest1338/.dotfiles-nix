@@ -38,7 +38,7 @@
                     format-icons = {
                         default = "○";
                         active = "●";
-                        urgent = "●";
+                        urgent = "⊛";
                     };
                 };
                 "custom/sound-switch" = {
