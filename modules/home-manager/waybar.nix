@@ -10,7 +10,7 @@
         settings = {
             mainBar = {
                 layer = "top";
-                position = "top";
+                position = "bottom";
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
@@ -92,7 +92,7 @@ fi
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 2px solid rgba(100, 114, 125, 0.5);
+    border-top: 2px solid rgba(100, 114, 125, 0.5);
     transition-property: background-color;
     transition-duration: .5s;
 }
