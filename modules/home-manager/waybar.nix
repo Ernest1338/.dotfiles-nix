@@ -45,11 +45,11 @@
                 "custom/sound-switch" = {
                     format = " ";
                     on-click = ''
-current=$(pactl list sinks | grep 'Active Port:' | grep 'analog' | cut -d' ' -f3)
+current=$(${pkgs.pulseaudio}/bin/pactl list sinks | ${pkgs.gnugrep}/bin/grep 'Active Port:' | ${pkgs.gnugrep}/bin/grep 'analog' | ${pkgs.coreutils-full}/bin/cut -d' ' -f3)
 if [[ $current == "analog-output-lineout" ]]; then
-    pactl set-sink-port 0 analog-output-headphones
+    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-headphones
 elif [[ $current == "analog-output-headphones" ]]; then
-    pactl set-sink-port 0 analog-output-lineout
+    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-lineout
 fi
                     '';
                 };
