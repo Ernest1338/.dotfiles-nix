@@ -77,7 +77,7 @@
                 "$mod, Space, exec, $menu"
                 "Alt, Tab, cyclenext"
                 "Alt, Tab, bringactivetotop"
-                "Super, L, exec, hyprlock"
+                "$mod, L, exec, hyprlock"
                 ", Print, exec, $screenshot"
 
                 "$mod, left, movefocus, l"
