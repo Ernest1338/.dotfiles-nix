@@ -143,6 +143,7 @@ button:hover {
 #cpu:hover,
 #memory:hover,
 #clock:hover,
+#language:hover,
 #custom-suspend:hover,
 #custom-sound-switch:hover {
     background: rgba(0, 0, 0, 0.2);
