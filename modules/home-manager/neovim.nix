@@ -1,3 +1,6 @@
 { lib, pkgs, ... }: {
-    home.packages = with pkgs; [ neovim ];
+    home.packages = with pkgs; [
+        neovim
+        lua-language-server
+    ];
 }
