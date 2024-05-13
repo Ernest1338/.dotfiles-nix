@@ -87,6 +87,12 @@ fi
                 "battery" = {
                     format = "   {}%";
                 };
+                "power-profiles-daemon" = {
+                    format = "   {}";
+                };
+                "backlight" = {
+                    format = "   {}";
+                };
             };
         };
         style = ''
@@ -255,18 +261,18 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background: transparent;
+    color: #f53c3c;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
+    background: transparent;
+    color: #2980b9;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    background: transparent;
+    color: #2ecc71;
 }
 
 label:focus {
@@ -286,7 +292,7 @@ label:focus {
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background: transparent;
 }
 
 #network {
