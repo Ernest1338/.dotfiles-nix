@@ -11,6 +11,7 @@
             mainBar = {
                 layer = "top";
                 position = "bottom";
+                output = [ "Virtual-1" ]; # TODO: switch monitor on a real PC
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
