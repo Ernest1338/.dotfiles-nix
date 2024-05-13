@@ -2,7 +2,6 @@
     environment.systemPackages = with pkgs; [
         wget
         htop
-        brave
         wl-clipboard
         python3
         ripgrep
@@ -11,7 +10,6 @@
         ncdu
         fd
         uv
-        ruff
         qemu
         ffmpeg
     ];

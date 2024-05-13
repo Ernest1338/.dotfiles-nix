@@ -15,6 +15,7 @@
         ../../modules/home-manager/mako.nix
         ../../modules/home-manager/neovim.nix
         ../../modules/home-manager/fuzzel.nix
+        ../../modules/home-manager/brave.nix
 
         ../../modules/home-manager/hyprland.nix
         ../../modules/home-manager/waybar.nix

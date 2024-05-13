@@ -5,7 +5,7 @@
         enable = true;
         systemd = {
             enable = true;
-            target = "hyprland-session.target";
+            #target = "hyprland-session.target";
         };
         settings = {
             mainBar = {
@@ -61,7 +61,7 @@ fi
                 };
                 "custom/picker" = {
                     format = " ";
-                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker | ${pkgs.wl-clipboard}/bin/wl-copy";
+                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker -a";
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
