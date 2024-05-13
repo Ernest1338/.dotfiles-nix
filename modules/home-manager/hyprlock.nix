@@ -1,6 +1,6 @@
 { lib, pkgs, vars, ... }: {
     home.packages = with pkgs; [ hyprlock ];
-    security.pam.services.hyprlock = {};
+    # security.pam.services.hyprlock = {};
     programs.hyprlock = {
         enable = true;
         settings = {
@@ -27,7 +27,7 @@
                 inner_color = "rgb(91, 96, 120)";
                 outer_color = "rgb(24, 25, 38)";
                 outline_thickness = 5;
-                placeholder_text = '\'<span foreground="##cad3f5">Password...</span>'\';
+                placeholder_text = "<span foreground=\"##cad3f5\">Password...</span>";
                 shadow_passes = 2;
             } ];
         };
