@@ -4,8 +4,8 @@
         enable = true;
         settings = {
             colors = {
-                background = "3c3836ff";
-                selection = "504945ff";
+                background = "2b3035ff";
+                selection = "353a3fff";
                 selection-text = "fbf1c7ff";
                 text = "ebdbb2ff";
                 border = "1d2021ff";
