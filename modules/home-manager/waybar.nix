@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, vars, ... }: {
     home.packages = with pkgs; [ waybar ];
     # NOTE: shurely there is a better way of doing on-click instead of "${pkgs.something}/bin/something"
     programs.waybar = {
@@ -18,7 +18,7 @@
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
-                    "custom/sound-switch"
+                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
                     "custom/suspend"
                     #"hyprland/language"
                     #"idle_inhibitor"

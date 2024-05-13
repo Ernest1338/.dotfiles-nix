@@ -26,7 +26,12 @@
     };
 
     home-manager = {
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {
+            inherit inputs;
+            vars = {
+                hostName = "nixos-laptop";
+            };
+        };
         users = {
             "dvdnix" = import ./home.nix;
         };
