@@ -18,7 +18,6 @@
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
-                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
                     "custom/suspend"
                     #"hyprland/language"
                     #"idle_inhibitor"
@@ -31,6 +30,7 @@
                     #"backlight"
                     "battery"
                     "clock"
+                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
                 ];
                 "hyprland/workspaces" = {
                     #disable-scroll = true;
