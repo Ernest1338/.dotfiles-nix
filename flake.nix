@@ -18,6 +18,12 @@
                     ./hosts/nixos/configuration.nix
                 ];
             };
+            nixos-laptop = nixpkgs.lib.nixosSystem {
+                specialArgs = {inherit inputs outputs;};
+                modules = [
+                    ./hosts/nixos-laptop/configuration.nix
+                ];
+            };
         };
     };
 }
