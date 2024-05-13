@@ -14,13 +14,13 @@
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
+                    "custom/suspend"
+                    "hyprland/language"
+                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
                     #"tray"
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
-                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
-                    "custom/suspend"
-                    "hyprland/language"
                     #"idle_inhibitor"
                     "pulseaudio"
                     "network"
@@ -78,6 +78,10 @@ fi
                 "cpu" = {
                     format = "   {1}%";
                     on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.htop}/bin/htop -s PERCENT_CPU'";
+                };
+                "hyprland/language" = {
+                    format = "{}";
+                    on-click = "${pkgs.hyprland}/bin/hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
                 };
             };
         };
@@ -191,6 +195,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#language,
 #mpd {
     padding: 0 10px;
 }
@@ -369,11 +374,7 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
+    background: transparent;
 }
 
 #keyboard-state {
