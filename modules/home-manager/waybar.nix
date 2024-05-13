@@ -54,7 +54,7 @@ fi
                     '';
                 };
                 "custom/suspend" = {
-                    format = "";
+                    format = "  sleep";
                     on-click = "systemctl suspend";
                 };
                 "pulseaudio" = {
@@ -80,7 +80,7 @@ fi
                     on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.htop}/bin/htop -s PERCENT_CPU'";
                 };
                 "hyprland/language" = {
-                    format = "{}";
+                    format = "   {}";
                     on-click = "${pkgs.hyprland}/bin/hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
                 };
             };
