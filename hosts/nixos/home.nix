@@ -18,14 +18,14 @@
 
         ../../modules/home-manager/hyprland.nix
         ../../modules/home-manager/waybar.nix
-        #../../modules/home-manager/river.nix
-        #../../modules/home-manager/yambar.nix
+        # ../../modules/home-manager/river.nix
+        # ../../modules/home-manager/yambar.nix
 
         ../../modules/home-manager/screenshotting.nix
         ../../modules/home-manager/cursor.nix
         ../../modules/home-manager/dconf.nix
         ../../modules/home-manager/gtk.nix
-        #../../modules/home-manager/qt.nix
+        # ../../modules/home-manager/qt.nix
     ];
 
     home.sessionVariables = {

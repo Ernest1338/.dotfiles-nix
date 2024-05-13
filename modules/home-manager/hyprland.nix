@@ -1,4 +1,5 @@
 { lib, pkgs, ... }: {
+    # TODO: bind to switch to next/prev output (monitor)
     home.packages = with pkgs; [
         hyprland
         hyprlock
