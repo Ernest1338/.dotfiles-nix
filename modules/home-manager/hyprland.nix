@@ -1,5 +1,4 @@
 { lib, pkgs, vars, ... }: {
-    # TODO: bind to switch to next/prev output (monitor)
     home.packages = with pkgs; [
         hyprland
         hyprlock
@@ -82,10 +81,10 @@
                 "$mod, F, togglefloating"
                 "$mod, P, exec, $menu"
                 "$mod, Space, exec, $menu"
-                # "Alt, Tab, cyclenext"
-                # "Alt, Tab, bringactivetotop"
                 "$mod, Left, focusmonitor, -1"
                 "$mod, Right, focusmonitor, +1"
+                # "Alt, Tab, cyclenext"
+                # "Alt, Tab, bringactivetotop"
                 "$mod, Tab, focuscurrentorlast"
                 "$mod, L, exec, hyprlock"
                 ", Print, exec, $screenshot"
