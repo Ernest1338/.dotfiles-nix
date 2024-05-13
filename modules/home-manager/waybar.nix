@@ -64,7 +64,7 @@ fi
                 "network" = {
                     format-ethernet = "   {ifname}";
                     format-wifi = "   {essid}";
-                    format-disconnected = "nope";
+                    format-disconnected = " ";
                     on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.networkmanager}/bin/nmtui'";
                 };
                 "clock" = {
