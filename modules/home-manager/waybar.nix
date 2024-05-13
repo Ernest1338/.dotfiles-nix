@@ -84,6 +84,9 @@ fi
                     format = "   {}";
                     on-click = "${pkgs.hyprland}/bin/hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
                 };
+                "battery" = {
+                    format = "   {}%";
+                };
             };
         };
         style = ''
@@ -222,12 +225,10 @@ button:hover {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background: transparent;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
     background-color: #26A65B;
 }
 

@@ -9,6 +9,7 @@
             "$mod" = "ALT";
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
+            "$screenshot" = "grim -g \"$(slurp)\" \"$HOME/Pictures/$(date +%Y%m%d-%H%M%S).png\"";
             general = {
                 border_size = 1;
                 gaps_in = 2;
@@ -77,7 +78,7 @@
                 "Alt, Tab, cyclenext"
                 "Alt, Tab, bringactivetotop"
                 "Super, L, exec, hyprlock"
-                #"Print, exec, grim -g \"$(slurp)\"" # TODO
+                ", Print, exec, $screenshot"
 
                 "$mod, left, movefocus, l"
                 "$mod, right, movefocus, r"
