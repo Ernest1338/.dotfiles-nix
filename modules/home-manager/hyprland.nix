@@ -82,8 +82,11 @@
                 "$mod, F, togglefloating"
                 "$mod, P, exec, $menu"
                 "$mod, Space, exec, $menu"
-                "Alt, Tab, cyclenext"
-                "Alt, Tab, bringactivetotop"
+                # "Alt, Tab, cyclenext"
+                # "Alt, Tab, bringactivetotop"
+                "$mod, Left, focusmonitor, -1"
+                "$mod, Right, focusmonitor, +1"
+                "$mod, Tab, focuscurrentorlast"
                 "$mod, L, exec, hyprlock"
                 ", Print, exec, $screenshot"
 
