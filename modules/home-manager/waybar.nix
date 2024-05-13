@@ -15,8 +15,9 @@
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
-                    "custom/suspend"
                     "hyprland/language"
+                    "custom/suspend"
+                    "custom/picker"
                     "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
                     #"tray"
                 ];
@@ -55,8 +56,12 @@ fi
                     '';
                 };
                 "custom/suspend" = {
-                    format = "  sleep";
+                    format = " ";
                     on-click = "systemctl suspend";
+                };
+                "custom/picker" = {
+                    format = " ";
+                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker -a";
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
@@ -154,16 +159,9 @@ button:hover {
 #clock:hover,
 #language:hover,
 #custom-suspend:hover,
+#custom-picker:hover,
 #custom-sound-switch:hover {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#custom-suspend {
-    padding: 0 10px;
-}
-
-#custom-sound-switch {
-    padding: 0 10px;
 }
 
 #workspaces button {
@@ -207,6 +205,9 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #language,
+#custom-picker,
+#custom-suspend,
+#custom-sound-switch,
 #mpd {
     padding: 0 10px;
 }
