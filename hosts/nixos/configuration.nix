@@ -12,7 +12,6 @@
         ../../modules/nixos/networking.nix
         ../../modules/nixos/sound.nix
         ../../modules/nixos/display-manager.nix
-        ../../modules/nixos/pam.nix
         inputs.home-manager.nixosModules.default
     ];
 

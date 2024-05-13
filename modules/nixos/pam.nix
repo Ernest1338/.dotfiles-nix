@@ -1,4 +1,4 @@
 { lib, ... }: {
     # for hyprlock (from hyprland project)
-    security.pam.services.hyprlock = {};
+    # security.pam.services.hyprlock = {};
 }
