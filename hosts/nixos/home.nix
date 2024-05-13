@@ -38,7 +38,6 @@
         GOPATH = "$HOME/Programming/GoTarget";
     };
 
-    # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
     home.stateVersion = "23.11";
 }
