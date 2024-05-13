@@ -9,7 +9,6 @@
             "$mod" = "ALT";
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
-            "monitor" = ",preferred,auto,auto";
             general = {
                 border_size = 1;
                 gaps_in = 2;
@@ -18,6 +17,9 @@
                 "col.inactive_border" = "rgba(595959aa)";
                 layout = "dwindle";
             };
+            monitor = [
+                "Virtual-1,1920x1080@75,0x0,1" # TODO: setup monitors on a real PC (conditional for laptop)
+            ];
             decoration = {
                 rounding = 5;
                 blur = {
