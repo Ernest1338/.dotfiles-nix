@@ -61,7 +61,7 @@ fi
                 };
                 "custom/picker" = {
                     format = " ";
-                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker -a";
+                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker | ${pkgs.wl-clipboard}/bin/wl-copy";
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
