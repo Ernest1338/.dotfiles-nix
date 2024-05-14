@@ -169,8 +169,12 @@ button:hover {
 
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
+    background-color: rgba(100, 114, 125, 0.2);
     color: #ffffff;
+}
+
+#workspaces button.empty {
+    background: transparent;
 }
 
 #workspaces button.active {
