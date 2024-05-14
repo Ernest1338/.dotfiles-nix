@@ -15,14 +15,14 @@
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
-                    "hyprland/language"
-                    "custom/suspend"
-                    "custom/picker"
-                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
                     #"tray"
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
+                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
+                    "custom/picker"
+                    "custom/suspend"
+                    "hyprland/language"
                     #"idle_inhibitor"
                     "pulseaudio"
                     "network"
@@ -35,14 +35,17 @@
                     "clock"
                 ];
                 "hyprland/workspaces" = {
+                    "persistent-workspaces" = {
+                        "*" = 10;
+                    };
                     #disable-scroll = true;
                     #all-outputs = true;
-                    format = "{icon}";
-                    format-icons = {
-                        default = "○";
-                        active = "●";
-                        urgent = "⊛";
-                    };
+                    # format = "{icon}";
+                    # format-icons = {
+                    #     default = "○";
+                    #     active = "●";
+                    #     urgent = "⊛";
+                    # };
                 };
                 "custom/sound-switch" = {
                     format = " ";
@@ -61,7 +64,7 @@ fi
                 };
                 "custom/picker" = {
                     format = " ";
-                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker -a";
+                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker -a"; # TODO: fix (clipboard) (something related to using ${pkgs.x}/bin/x?)
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
@@ -168,6 +171,10 @@ button:hover {
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: rgba(100, 114, 125, 0.5);
 }
 
 #workspaces button:hover {
