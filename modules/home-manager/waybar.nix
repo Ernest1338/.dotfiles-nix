@@ -178,7 +178,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: rgba(100, 114, 125, 0.5);
+    background-color: rgba(100, 114, 125, 0.7);
 }
 
 #workspaces button:hover {
