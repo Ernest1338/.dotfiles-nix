@@ -19,9 +19,8 @@
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
-                    "${(if vars.hostName == "nixos" then "custom/sound-switch" else "")}"
-                    "custom/picker"
                     "custom/suspend"
+                    "custom/picker"
                     "hyprland/language"
                     #"idle_inhibitor"
                     "pulseaudio"
@@ -47,17 +46,6 @@
                     #     urgent = "⊛";
                     # };
                 };
-                "custom/sound-switch" = {
-                    format = " ";
-                    on-click = ''
-current=$(${pkgs.pulseaudio}/bin/pactl list sinks | ${pkgs.gnugrep}/bin/grep 'Active Port:' | ${pkgs.gnugrep}/bin/grep 'analog' | ${pkgs.coreutils-full}/bin/cut -d' ' -f3)
-if [[ $current == "analog-output-lineout" ]]; then
-    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-headphones
-elif [[ $current == "analog-output-headphones" ]]; then
-    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-lineout
-fi
-                    '';
-                };
                 "custom/suspend" = {
                     format = " ";
                     on-click = "systemctl suspend";
@@ -68,7 +56,15 @@ fi
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
-                    on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
+                    on-click = ''
+current=$(${pkgs.pulseaudio}/bin/pactl list sinks | ${pkgs.gnugrep}/bin/grep 'Active Port:' | ${pkgs.gnugrep}/bin/grep 'analog' | ${pkgs.coreutils-full}/bin/cut -d' ' -f3)
+if [[ $current == "analog-output-lineout" ]]; then
+    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-headphones
+elif [[ $current == "analog-output-headphones" ]]; then
+    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-lineout
+fi
+                    '';
+                    on-click-right = "${pkgs.pavucontrol}/bin/pavucontrol";
                 };
                 "network" = {
                     format-ethernet = "   {ifname}";
@@ -162,8 +158,7 @@ button:hover {
 #clock:hover,
 #language:hover,
 #custom-suspend:hover,
-#custom-picker:hover,
-#custom-sound-switch:hover {
+#custom-picker:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -220,7 +215,6 @@ button:hover {
 #language,
 #custom-picker,
 #custom-suspend,
-#custom-sound-switch,
 #mpd {
     padding: 0 10px;
 }
