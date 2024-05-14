@@ -170,10 +170,12 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: rgba(100, 114, 125, 0.2);
+    /* border-bottom: 2px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
 }
 
 #workspaces button.empty {
+    border: none;
     background: transparent;
 }
 
