@@ -15,8 +15,7 @@
                 line-height = 20;
             };
             key-bindings = {
-                prev-with-wrap = "Up Shift+Tab";
-                next-with-wrap = "Down Tab";
+                prev-with-wrap = "Shift+Tab";
             };
         };
     };
