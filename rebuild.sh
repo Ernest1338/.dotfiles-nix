@@ -6,8 +6,6 @@ pushd ~/.dotfiles/ &>/dev/null
 
 git diff
 echo "NixOS Rebuilding..."
-
-git pull
 git add .
 
 hname=$(hostname)
