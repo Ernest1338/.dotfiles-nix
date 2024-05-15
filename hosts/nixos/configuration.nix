@@ -20,7 +20,7 @@
     ];
 
     # NOTE: If want to diverge packages, remove from packages.nix and put here
-    environment.systemPackages = with pkgs; [ ];
+    # environment.systemPackages = with pkgs; [ ];
 
     networking.hostName = "nixos";
     users.users = {

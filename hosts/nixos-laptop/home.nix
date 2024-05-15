@@ -5,6 +5,8 @@
     home.homeDirectory = "/home/dvdnix";
 
     imports = [
+        ../../modules/home-manager/session-vars.nix
+
         ../../modules/home-manager/bash.nix
         ../../modules/home-manager/git.nix
         ../../modules/home-manager/tmux.nix
@@ -24,15 +26,8 @@
         # ../../modules/home-manager/qt.nix
     ];
 
-    home.sessionVariables = {
-        EDITOR = "nvim";
-        XDG_DATA_HOME = "$HOME/.local/share";
-        XDG_CONFIG_HOME = "$HOME/.config";
-        XDG_STATE_HOME = "$HOME/.local/state";
-        XDG_CACHE_HOME = "$HOME/.cache";
-        CARGO_TARGET_DIR = "$HOME/Programming/CargoTarget";
-        GOPATH = "$HOME/Programming/GoTarget";
-    };
+    # NOTE: If want to diverge session variables, remove from session-vars.nix and put here
+    # home.sessionVariables = { };
 
     programs.home-manager.enable = true;
     home.stateVersion = "23.11";
