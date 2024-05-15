@@ -1,3 +1,0 @@
-{ lib, pkgs, ... }: {
-    # programs.chromium = {};
-}
