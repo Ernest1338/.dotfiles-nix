@@ -37,6 +37,7 @@
         };
     };
 
+    programs.hyprland.enable = true; # TODO: move somewhere else to make configurable
     programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [ ];
 
