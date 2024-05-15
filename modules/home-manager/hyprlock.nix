@@ -1,5 +1,4 @@
 { lib, pkgs, vars, ... }: {
-    home.packages = with pkgs; [ hyprlock ];
     # security.pam.services.hyprlock = {};
     programs.hyprlock = {
         enable = true;

@@ -1,8 +1,4 @@
 { lib, pkgs, vars, ... }: {
-    home.packages = with pkgs; [
-        hyprland
-        hyprpicker
-    ];
     wayland.windowManager.hyprland = {
         enable = true;
         settings = {

@@ -1,6 +1,4 @@
 { lib, pkgs, vars, ... }: {
-    home.packages = with pkgs; [ waybar ];
-    # NOTE: shurely there is a better way of doing on-click instead of "${pkgs.something}/bin/something"
     programs.waybar = {
         enable = true;
         systemd = {
@@ -52,41 +50,41 @@
                 };
                 "custom/picker" = {
                     format = " ";
-                    on-click = "${pkgs.hyprpicker}/bin/hyprpicker -a"; # TODO: fix (clipboard) (something related to using ${pkgs.x}/bin/x?)
+                    on-click = "hyprpicker -a"; # TODO: fix (clipboard) (something related to using ${pkgs.x}/bin/x?)
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
                     on-click = ''
-current=$(${pkgs.pulseaudio}/bin/pactl list sinks | ${pkgs.gnugrep}/bin/grep 'Active Port:' | ${pkgs.gnugrep}/bin/grep 'analog' | ${pkgs.coreutils-full}/bin/cut -d' ' -f3)
+current=$(pactl list sinks | grep 'Active Port:' | grep 'analog' | cut -d' ' -f3)
 if [[ $current == "analog-output-lineout" ]]; then
-    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-headphones
+    pactl set-sink-port 0 analog-output-headphones
 elif [[ $current == "analog-output-headphones" ]]; then
-    ${pkgs.pulseaudio}/bin/pactl set-sink-port 0 analog-output-lineout
+    pactl set-sink-port 0 analog-output-lineout
 fi
                     '';
-                    on-click-right = "${pkgs.pavucontrol}/bin/pavucontrol";
+                    on-click-right = "pavucontrol";
                 };
                 "network" = {
                     format-ethernet = "   {ifname}";
                     format-wifi = "   {essid}";
                     format-disconnected = " ";
-                    on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.networkmanager}/bin/nmtui'";
+                    on-click = "alacritty -e bash -c 'nmtui'";
                 };
                 "clock" = {
                     format = "  {:%d/%m     %H:%M}";
-                    on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.util-linux}/bin/cal $(${pkgs.coreutils-full}/bin/date +%Y); read'";
+                    on-click = "alacritty -e bash -c 'cal $(date +%Y); read'";
                 };
                 "memory" = {
                     format = "   {0}%";
-                    on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.htop}/bin/htop -s PERCENT_MEM'";
+                    on-click = "alacritty -e bash -c 'htop -s PERCENT_MEM'";
                 };
                 "cpu" = {
                     format = "   {1}%";
-                    on-click = "${pkgs.alacritty}/bin/alacritty -e ${pkgs.bash}/bin/bash -c '${pkgs.htop}/bin/htop -s PERCENT_CPU'";
+                    on-click = "alacritty -e bash -c 'htop -s PERCENT_CPU'";
                 };
                 "hyprland/language" = {
                     format = "   {1}";
-                    on-click = "${pkgs.hyprland}/bin/hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
+                    on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
                 };
                 "battery" = {
                     format = "   {}%";

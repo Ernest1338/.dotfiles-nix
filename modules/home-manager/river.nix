@@ -1,5 +1,4 @@
 { lib, pkgs, ... }: {
-    home.packages = with pkgs; [ river ];
     wayland.windowManager.river = {
         enable = true;
         settings = {

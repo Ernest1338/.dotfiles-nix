@@ -1,5 +1,4 @@
 { lib, pkgs, ... }: {
-    home.packages = with pkgs; [ dconf ];
     dconf = {
         enable = true;
         settings = {

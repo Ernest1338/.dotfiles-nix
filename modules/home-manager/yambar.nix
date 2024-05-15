@@ -1,8 +1,4 @@
 { lib, pkgs, ... }: {
-    home.packages = with pkgs; [
-        yambar
-        # yambar-hyprland-wses
-    ];
     programs.yambar.enable = true;
     xdg.configFile."yambar/config.yml".text = ''
 # Typical laptop setup, with wifi, brightness, battery etc, for
