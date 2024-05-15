@@ -5,7 +5,7 @@
         ./hardware-configuration.nix
         ../../modules/nixos/nix.nix
         ../../modules/nixos/bootloader.nix
-        ../../modules/nixos/base-packages.nix
+        ../../modules/nixos/packages.nix
         ../../modules/nixos/input.nix
         ../../modules/nixos/locale.nix
         ../../modules/nixos/fonts.nix
@@ -19,31 +19,8 @@
         inputs.home-manager.nixosModules.default
     ];
 
-    environment.systemPackages = with pkgs; [
-        python3
-        uv
-        rustup
-        qemu
-        ffmpeg
-        alacritty
-        brave
-        dconf
-        mpv
-        lazygit
-        # [[ wayland ]]
-        wl-clipboard
-        fuzzel
-        waybar
-        mako
-        imv
-        # [[ thunar ]]
-        xfce.thunar
-        xfce.thunar-archive-plugin
-        xfce.thunar-volman
-        # [[ screenshotting ]]
-        grim
-        slurp
-    ];
+    # NOTE: If want to diverge packages, remove from packages.nix and put here
+    environment.systemPackages = with pkgs; [ ];
 
     networking.hostName = "nixos";
     users.users = {
