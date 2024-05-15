@@ -50,7 +50,7 @@
                 };
                 "custom/picker" = {
                     format = " ";
-                    on-click = "hyprpicker -a"; # TODO: fix (clipboard) (something related to using ${pkgs.x}/bin/x?)
+                    on-click = "hyprpicker -a";
                 };
                 "pulseaudio" = {
                     format = "   {1}%";
