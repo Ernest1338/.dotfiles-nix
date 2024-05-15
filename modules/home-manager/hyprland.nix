@@ -81,7 +81,7 @@
                 # "Alt, Tab, cyclenext"
                 # "Alt, Tab, bringactivetotop"
                 "$mod, Tab, focuscurrentorlast"
-                "$mod, L, exec, hyprlock"
+                "$mod, L, exec, hyprlock --immediate"
                 ", Print, exec, $screenshot"
 
                 "$mod, left, movefocus, l"
