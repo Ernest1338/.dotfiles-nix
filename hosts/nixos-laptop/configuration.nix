@@ -5,14 +5,44 @@
         ./hardware-configuration.nix
         ../../modules/nixos/nix.nix
         ../../modules/nixos/bootloader.nix
-        ../../modules/nixos/packages.nix
+        ../../modules/nixos/base-packages.nix
         ../../modules/nixos/input.nix
         ../../modules/nixos/locale.nix
         ../../modules/nixos/fonts.nix
         ../../modules/nixos/networking.nix
         ../../modules/nixos/sound.nix
         ../../modules/nixos/display-manager.nix
+        ../../modules/nixos/ld-fix.nix
+        ../../modules/nixos/hyprland.nix
+        # ../../modules/nixos/opengl.nix
+        # ../../modules/nixos/auto-upgrade.nix
         inputs.home-manager.nixosModules.default
+    ];
+
+    environment.systemPackages = with pkgs; [
+        python3
+        uv
+        rustup
+        qemu
+        ffmpeg
+        alacritty
+        brave
+        dconf
+        mpv
+        lazygit
+        # [[ wayland ]]
+        wl-clipboard
+        fuzzel
+        waybar
+        mako
+        imv
+        # [[ thunar ]]
+        xfce.thunar
+        xfce.thunar-archive-plugin
+        xfce.thunar-volman
+        # [[ screenshotting ]]
+        grim
+        slurp
     ];
 
     networking.hostName = "nixos-laptop";
@@ -36,24 +66,6 @@
             "dvdnix" = import ./home.nix;
         };
     };
-
-    programs.hyprland.enable = true; # TODO: move somewhere else to make configurable
-    programs.nix-ld.enable = true;
-    programs.nix-ld.libraries = with pkgs; [ ];
-
-    # hardware.opengl.enable = true;
-
-    # system.autoUpgrade = {
-    #     enable = true;
-    #     flake = inputs.self.outPath;
-    #     flags = [
-    #         "--update-input"
-    #         "nixpkgs"
-    #         "-L"
-    #     ];
-    #     dates = "09:00";
-    #     randomizedDelaySec = "45min";
-    # };
 
     system.stateVersion = "23.11";
 }
