@@ -30,6 +30,7 @@
 
         # [[ others ]]
         python3
+        python312Packages.python-lsp-server
         uv
         rustup
         qemu
