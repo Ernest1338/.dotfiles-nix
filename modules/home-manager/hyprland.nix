@@ -30,6 +30,9 @@
                     passes = 1;
                     vibrancy = 0.1696;
                 };
+                # layerrule = [
+                #     "blur, waybar"
+                # ];
                 drop_shadow = false;
                 shadow_range = 4;
                 shadow_render_power = 3;
