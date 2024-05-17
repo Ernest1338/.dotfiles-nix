@@ -2,7 +2,7 @@
 
 ```sh
 nix-shell -p git
-git clone https://github.com/Ernest1338/nixos-v2 ~/.dotfiles
+git clone https://github.com/Ernest1338/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 sudo nixos-generate-config --show-hardware-config > ./hosts/$(hostname)/hardware-configuration.nix
 ./rebuild.sh
