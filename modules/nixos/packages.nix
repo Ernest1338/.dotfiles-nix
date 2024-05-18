@@ -40,6 +40,7 @@
         dconf
         mpv
         lazygit
+        lua-language-server
         # pcmanfm
         # adwaita-qt
         # adwaita-qt6
