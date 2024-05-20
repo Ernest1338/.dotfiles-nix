@@ -10,7 +10,7 @@ nix-shell -p git
 git clone https://github.com/Ernest1338/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 sudo nixos-generate-config --show-hardware-config > ./hosts/$(hostname)/hardware-configuration.nix
-sudo nixos-rebuild switch --cores $(nproc) --flake .#CONFIGURATION_NAME || exit 1
+sudo nixos-rebuild switch --cores $(nproc) --flake .#CONFIGURATION_NAME
 reboot
 ```
 
