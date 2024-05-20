@@ -1,5 +1,9 @@
 # Instalation
 
+Install system using Gnome ISO
+Create a user "dvdnix" and set password
+Warsaw, No GUI, allow unfree
+
 ```sh
 nix-shell -p git
 git clone https://github.com/Ernest1338/.dotfiles ~/.dotfiles
