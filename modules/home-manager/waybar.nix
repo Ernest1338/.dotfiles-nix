@@ -1,4 +1,10 @@
-{ lib, pkgs, vars, ... }: {
+{ lib, pkgs, vars, ... }:
+let
+    output = if vars.hostName == "nixos-laptop" then
+        [ "LVDS-1" ]
+    else
+        [ "Virtual-1" ]; # TODO: switch monitor on a real PC
+in {
     programs.waybar = {
         enable = true;
         systemd = {
@@ -9,13 +15,7 @@
             mainBar = {
                 layer = "top";
                 position = "bottom";
-                output = [
-                    "${(if vars.hostName == "nixos-laptop" then
-                        "LVDS-1"
-                    else
-                        "Virtual-1"
-                    )}"
-                ]; # TODO: switch monitor on a real PC
+                output = output;
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
