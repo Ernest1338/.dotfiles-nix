@@ -41,6 +41,7 @@
         mpv
         lazygit
         lua-language-server
+        brightnessctl
         # pcmanfm
         # adwaita-qt
         # adwaita-qt6

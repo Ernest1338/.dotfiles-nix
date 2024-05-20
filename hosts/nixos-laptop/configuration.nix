@@ -5,6 +5,7 @@
         ./hardware-configuration.nix
         ../../modules/nixos/nix.nix
         ../../modules/nixos/bootloader.nix
+        ../../modules/nixos/kernel.nix
         ../../modules/nixos/packages.nix
         ../../modules/nixos/input.nix
         ../../modules/nixos/locale.nix
