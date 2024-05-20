@@ -17,7 +17,7 @@
             monitor = [
                 # TODO: setup monitors on a real PC (conditional for laptop)
                 "${(if vars.hostName == "nixos-laptop" then
-                    "Virtual-1,1600x900@60,0x0,1"
+                    "LVDS-1,1600x900@60,0x0,1"
                     else
                     "Virtual-1,1920x1080@75,0x0,1"
                 )}"
