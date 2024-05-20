@@ -1,7 +1,7 @@
 # Instalation
 
 Install system using Gnome ISO \
-Create a user "dvdnix" and set password \
+Create a user "dvdnix", set password, no auto login \
 Warsaw, No GUI, allow unfree
 
 ```sh
