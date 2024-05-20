@@ -161,6 +161,8 @@ button:hover {
 #memory:hover,
 #clock:hover,
 #language:hover,
+#backlight:hover,
+#battery:hover,
 #custom-suspend:hover,
 #custom-picker:hover {
     background: rgba(0, 0, 0, 0.2);
