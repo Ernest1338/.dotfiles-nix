@@ -13,7 +13,7 @@
                     "${(if vars.hostName == "nixos-laptop" then
                         "LVDS-1"
                     else
-                        "Virtual-1,1920x1080@75,0x0,1"
+                        "Virtual-1"
                     )}"
                 ]; # TODO: switch monitor on a real PC
                 height = 24;
