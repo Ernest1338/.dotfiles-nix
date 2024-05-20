@@ -3,7 +3,7 @@
         systemd-boot.enable = false;
         grub = {
             enable = true;
-            device = "nodev";
+            devices = [ "nodev" ];
             useOSProber = false;
         };
     };

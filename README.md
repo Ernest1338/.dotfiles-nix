@@ -1,15 +1,16 @@
 # Instalation
 
-Install system using Gnome ISO
-Create a user "dvdnix" and set password
+Install system using Gnome ISO \
+Create a user "dvdnix" and set password \
 Warsaw, No GUI, allow unfree
 
 ```sh
+nmtui # IF WIRELESS
 nix-shell -p git
 git clone https://github.com/Ernest1338/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 sudo nixos-generate-config --show-hardware-config > ./hosts/$(hostname)/hardware-configuration.nix
-./rebuild.sh
+sudo nixos-rebuild switch --cores $(nproc) --flake .#CONFIGURATION_NAME || exit 1
 reboot
 ```
 
