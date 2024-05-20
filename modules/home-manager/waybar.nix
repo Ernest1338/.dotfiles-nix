@@ -25,10 +25,10 @@
                 modules-right = [
                     "custom/suspend"
                     "custom/picker"
+                    "network"
                     "hyprland/language"
                     #"idle_inhibitor"
                     "pulseaudio"
-                    "network"
                     "power-profiles-daemon"
                     "cpu"
                     "memory"
@@ -71,8 +71,8 @@ fi
                     on-click-right = "pavucontrol";
                 };
                 "network" = {
-                    format-ethernet = "   {ifname}";
-                    format-wifi = "   {essid}";
+                    format-ethernet = " "; # "   {ifname}"
+                    format-wifi = " "; # "   {essid}"
                     format-disconnected = " ";
                     on-click = "alacritty -e bash -c 'nmtui'";
                 };
