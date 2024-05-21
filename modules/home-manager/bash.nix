@@ -41,10 +41,13 @@ mnt() {
     # Check if the mount was successful
     if [ $? -eq 0 ]; then
         echo "Successfully mounted $DEVICE to $MOUNT_PATH"
+        echo "Press enter to umount..."
     else
         echo "Failed to mount $DEVICE"
         return 1
     fi
+
+    read && sudo umount "$MOUNT_PATH" && sudo rmdir "$MOUNT_PATH" && echo "Successfully umounted $DEVICE"
 }
         '';
     };
