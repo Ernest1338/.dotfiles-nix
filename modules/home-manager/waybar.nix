@@ -52,7 +52,7 @@ in {
                 };
                 "custom/suspend" = {
                     format = " ";
-                    on-click = "systemctl suspend";
+                    on-click = "systemctl suspend && hyprlock --immediate";
                 };
                 "custom/picker" = {
                     format = " ";
