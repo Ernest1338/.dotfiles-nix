@@ -64,6 +64,10 @@
                 kb_options = "caps:escape";
                 repeat_delay = 300;
                 repeat_rate = 40;
+                touchpad = {
+                    scroll_factor = 0.2;
+                    natural_scroll = true;
+                };
             };
             bindm = [
                 "$mod, mouse:272, movewindow"
