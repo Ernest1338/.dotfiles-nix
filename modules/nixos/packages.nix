@@ -2,7 +2,7 @@
     environment.systemPackages = with pkgs; [
         # [[ base packages ]]
         wget
-        htop
+        btop
         ripgrep
         fd
         ncdu
@@ -41,7 +41,7 @@
         mpv
         lazygit
         lua-language-server
-        udiskie
+        # udiskie
         # pcmanfm
         # adwaita-qt
         # adwaita-qt6
