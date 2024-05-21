@@ -93,8 +93,8 @@ fi
                     on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
                 };
                 "battery" = {
-                    format = "   {}%";
-                    format-icons = [ " " " " " " " " " " ];
+                    format = "{icon}  {}%";
+                    format-icons = [ " " " " " " " " " " ];
                 };
                 "power-profiles-daemon" = {
                     format = "   {}";
