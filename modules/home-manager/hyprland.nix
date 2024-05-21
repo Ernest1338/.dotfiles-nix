@@ -7,11 +7,11 @@
             "$menu" = "fuzzel";
             "$screenshot" = "grim -g \"$(slurp)\" \"$HOME/Pictures/$(date +%Y%m%d-%H%M%S).png\"";
             general = {
-                border_size = 1;
+                border_size = 0; # 1
                 gaps_in = 2;
-                gaps_out = 4;
-                "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-                "col.inactive_border" = "rgba(595959aa)";
+                gaps_out = 0; # 4
+                # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+                # "col.inactive_border" = "rgba(595959aa)";
                 layout = "dwindle";
             };
             monitor = [
@@ -33,10 +33,10 @@
                 # layerrule = [
                 #     "blur, waybar"
                 # ];
-                drop_shadow = false;
-                shadow_range = 4;
-                shadow_render_power = 3;
-                "col.shadow" = "rgba(1a1a1aee)";
+                # drop_shadow = false;
+                # shadow_range = 4;
+                # shadow_render_power = 3;
+                # "col.shadow" = "rgba(1a1a1aee)";
             };
             animations = {
                 enabled = true;
