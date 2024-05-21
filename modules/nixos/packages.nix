@@ -41,6 +41,7 @@
         mpv
         lazygit
         lua-language-server
+        udiskie
         # pcmanfm
         # adwaita-qt
         # adwaita-qt6
