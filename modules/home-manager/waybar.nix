@@ -20,6 +20,8 @@ in {
                 modules-left = [
                     "hyprland/workspaces"
                     #"tray"
+                    "cpu"
+                    "memory"
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
@@ -30,8 +32,6 @@ in {
                     #"idle_inhibitor"
                     "pulseaudio"
                     "power-profiles-daemon"
-                    "cpu"
-                    "memory"
                     #"temperature"
                     "backlight"
                     "battery"
