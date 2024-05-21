@@ -101,8 +101,8 @@ fi
                 };
                 "backlight" = {
                     format = "   {}";
-                    on-scroll-up = "brightnessctl set +2%";
-                    on-scroll-down = "brightnessctl set 2%-";
+                    on-scroll-up = "brightnessctl set +1%";
+                    on-scroll-down = "brightnessctl set 1%-";
                 };
             };
         };
