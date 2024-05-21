@@ -38,6 +38,10 @@
                 # shadow_render_power = 3;
                 # "col.shadow" = "rgba(1a1a1aee)";
             };
+            # touchpad needs to support gestures
+            # gestures = {
+            #     workspace_swipe = true;
+            # };
             animations = {
                 enabled = true;
                 # bezier = [
