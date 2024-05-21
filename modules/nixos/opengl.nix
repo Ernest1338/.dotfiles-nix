@@ -3,5 +3,5 @@
     hardware.opengl.driSupport = true;
     hardware.opengl.driSupport32Bit = true;
     # for laptop gpu
-    boot.kernelParams = [ "radeon.si_support=0" "amdgpu.si_support=1" ];
+    # boot.kernelParams = [ "radeon.si_support=0" "amdgpu.si_support=1" ];
 }
