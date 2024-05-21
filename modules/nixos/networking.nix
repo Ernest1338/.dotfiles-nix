@@ -7,5 +7,5 @@
         nameservers = [ "1.1.1.1" "9.9.9.9" ];
         # wireless.enable = true; # Enables wireless support via wpa_supplicant.
     };
-    # systemd.services.NetworkManager-wait-online.enable = false;
+    systemd.services.NetworkManager-wait-online.enable = false;
 }
