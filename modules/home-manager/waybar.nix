@@ -90,7 +90,7 @@ fi
                 };
                 "hyprland/language" = {
                     format = "   {1}";
-                    on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next"; # TODO: switch device on a real PC
+                    on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next"; # NOTE: if broken, switch keyboard
                 };
                 "battery" = {
                     format = "{icon}  {}%";
@@ -100,7 +100,7 @@ fi
                     format = "   {}";
                 };
                 "backlight" = {
-                    format = "   {}";
+                    format = "   {}%";
                     on-scroll-up = "brightnessctl set +1%";
                     on-scroll-down = "brightnessctl set 1%-";
                 };

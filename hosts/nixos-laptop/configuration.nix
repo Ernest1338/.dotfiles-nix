@@ -15,12 +15,12 @@
         ../../modules/nixos/display-manager.nix
         ../../modules/nixos/ld-fix.nix
         ../../modules/nixos/hyprland.nix
+        ../../modules/nixos/laptop.nix
         # ../../modules/nixos/opengl.nix
         # ../../modules/nixos/auto-upgrade.nix
         inputs.home-manager.nixosModules.default
     ];
 
-    # NOTE: If want to diverge packages, remove from packages.nix and put here
     # environment.systemPackages = with pkgs; [ ];
 
     networking.hostName = "nixos-laptop";
