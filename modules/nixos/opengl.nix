@@ -1,7 +1,12 @@
 { lib, pkgs, vars, ... }: {
-    hardware.opengl.enable = true;
-    hardware.opengl.driSupport = true;
-    hardware.opengl.driSupport32Bit = true;
-    # for laptop gpu
-    # boot.kernelParams = [ "radeon.si_support=0" "amdgpu.si_support=1" ];
+    hardware.opengl = {
+        enable = true;
+        driSupport = true;
+        driSupport32Bit = true;
+        # extraPackages = with pkgs; [
+        #     vulkan-loader
+        #     vulkan-validation-layers
+        #     vulkan-extension-layer
+        # ];
+    };
 }

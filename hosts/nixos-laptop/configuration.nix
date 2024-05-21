@@ -49,5 +49,9 @@
         };
     };
 
+    # support for AMD gpu
+    # boot.initrd.kernelModules = [ "amdgpu" ];
+    # boot.kernelParams = [ "radeon.si_support=0" "amdgpu.si_support=1" ];
+
     system.stateVersion = "23.11";
 }
