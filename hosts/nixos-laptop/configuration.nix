@@ -17,6 +17,7 @@
         ../../modules/nixos/hyprland.nix
         ../../modules/nixos/laptop.nix
         ../../modules/nixos/firewall.nix
+        ../../modules/nixos/auto-disk-mount.nix
         # ../../modules/nixos/opengl.nix
         # ../../modules/nixos/auto-upgrade.nix
         inputs.home-manager.nixosModules.default
