@@ -22,11 +22,11 @@ in {
                     # "tray"
                     # "cpu"
                     # "memory"
-                    "custom/picker"
-                    "custom/suspend"
                 ];
-                modules-center = [ "hyprland/window" ];
+                # modules-center = [ "hyprland/window" ]; # disabled because of text elide issue
                 modules-right = [
+                    "custom/suspend"
+                    "custom/picker"
                     "network"
                     "hyprland/language"
                     #"idle_inhibitor"
