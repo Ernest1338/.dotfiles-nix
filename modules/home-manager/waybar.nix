@@ -31,7 +31,7 @@ in {
                     "hyprland/language"
                     #"idle_inhibitor"
                     "pulseaudio"
-                    "power-profiles-daemon"
+                    # "power-profiles-daemon"
                     #"temperature"
                     "backlight"
                     "battery"
