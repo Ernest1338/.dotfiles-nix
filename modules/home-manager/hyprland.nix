@@ -64,6 +64,7 @@
                 kb_options = "caps:escape";
                 repeat_delay = 300;
                 repeat_rate = 40;
+                numlock_by_default = true;
                 touchpad = {
                     scroll_factor = 0.2;
                     natural_scroll = true;
