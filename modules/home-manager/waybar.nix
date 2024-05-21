@@ -94,6 +94,7 @@ fi
                 };
                 "battery" = {
                     format = "   {}%";
+                    format-icons = [ " " " " " " " " " " ];
                 };
                 "power-profiles-daemon" = {
                     format = "   {}";
