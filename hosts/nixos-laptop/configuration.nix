@@ -15,13 +15,13 @@
         ../../modules/nixos/display-manager.nix
         ../../modules/nixos/ld-fix.nix
         ../../modules/nixos/hyprland.nix
-        ../../modules/nixos/laptop.nix
         ../../modules/nixos/firewall.nix
         ../../modules/nixos/timesync.nix
         ../../modules/nixos/startup-optimization-tweaks.nix
+        ../../modules/nixos/opengl.nix
         # ../../modules/nixos/auto-disk-mount.nix
-        # ../../modules/nixos/opengl.nix
         # ../../modules/nixos/auto-upgrade.nix
+        ../../modules/nixos/laptop.nix
         inputs.home-manager.nixosModules.default
     ];
 
