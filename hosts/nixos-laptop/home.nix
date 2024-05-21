@@ -14,7 +14,6 @@
         ../../modules/home-manager/mako.nix
         ../../modules/home-manager/fuzzel.nix
         ../../modules/home-manager/hyprlock.nix
-        ../../modules/home-manager/imv.nix
 
         ../../modules/home-manager/hyprland.nix
         ../../modules/home-manager/waybar.nix
