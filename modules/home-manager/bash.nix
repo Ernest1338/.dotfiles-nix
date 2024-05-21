@@ -10,7 +10,7 @@
             "gc" = "sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-env --delete-generations old";
             "up" = "~/.dotfiles/update.sh; rustup update";
             "alpvm" = "sudo systemd-nspawn -q -x -D ~/Files/Containers/alpine";
-            "gamingcont" = "sudo systemd-nspawn -q -D ~/Files/Containers/gaming -u gamer -E DISPLAY -E XDG_RUNTIME_DIR --bind=/dev/input --bind=/dev/dri/card1 --bind=/dev/dri/card2 --bind=/etc/machine-id --bind=/run/dbus/system_bus_socket --bind=/tmp/.X11-unix --bind=/dev/snd -E PULSE_SERVER=unix:$XDG_RUNTIME_DIR/pulse/native --bind=$XDG_RUNTIME_DIR --bind=$HOME/.config/pulse/cookie:/home/gamer/.config/pulse/cookie";
+            "gamingcont" = "sudo systemd-nspawn -q -D ~/Files/Containers/gaming -u gamer -E DISPLAY=$DISPLAY -E XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR --bind=/dev/input --bind=/dev/dri/card1 --bind=/dev/dri/card2 --bind=/etc/machine-id --bind=/run/dbus/system_bus_socket --bind=/tmp/.X11-unix --bind=/dev/snd -E PULSE_SERVER=unix:$XDG_RUNTIME_DIR/pulse/native --bind=$XDG_RUNTIME_DIR --bind=$HOME/.config/pulse/cookie:/home/gamer/.config/pulse/cookie";
         };
         initExtra = ''
 export PS1="\[$(tput bold)\]\[\033[38;5;0m\]\[\033[48;5;11m\]\u\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;255m\]\W\[$(tput sgr0)\]\[\033[38;5;11m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
