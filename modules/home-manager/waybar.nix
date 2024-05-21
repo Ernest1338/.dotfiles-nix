@@ -19,14 +19,14 @@ in {
                 height = 24;
                 modules-left = [
                     "hyprland/workspaces"
-                    #"tray"
-                    "cpu"
-                    "memory"
+                    # "tray"
+                    # "cpu"
+                    # "memory"
+                    "custom/picker"
+                    "custom/suspend"
                 ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [
-                    "custom/suspend"
-                    "custom/picker"
                     "network"
                     "hyprland/language"
                     #"idle_inhibitor"

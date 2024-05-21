@@ -7,7 +7,7 @@
             "vim" = "nvim";
             "pyserv" = "python3 -m http.server 8080";
             "c" = "cd";
-            "gc" = "sudo nix-collect-garbage -d && sudo nix-store --gc";
+            "gc" = "sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-env --delete-generations old";
             "up" = "~/.dotfiles/update.sh; rustup update";
             "alpvm" = "sudo systemd-nspawn -x -D ~/Files/Containers/alpine";
             "gamingcont" = "sudo systemd-nspawn -x -D ~/Files/Containers/arch"; # TODO
