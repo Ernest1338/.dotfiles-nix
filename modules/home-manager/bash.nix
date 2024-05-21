@@ -23,7 +23,7 @@ mnt() {
 
     DEVICE=$1
     MOUNT_DIR=$2
-    MOUNT_PATH="/run/media/$MOUNT_DIR"
+    MOUNT_PATH="/run/media/$USER/$MOUNT_DIR"
 
     # Create the mount directory if it does not exist
     if [ ! -d "$MOUNT_PATH" ]; then
