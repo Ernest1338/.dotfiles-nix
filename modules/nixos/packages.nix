@@ -2,7 +2,7 @@
     environment.systemPackages = with pkgs; [
         # [[ base packages ]]
         wget
-        btop
+        htop
         ripgrep
         fd
         ncdu
