@@ -1,3 +1,3 @@
 { lib, pkgs, ... }: {
-    services.ntp.enable = true;
+    services.ntp.enable = true; # Faster than systemd-timesyncd
 }

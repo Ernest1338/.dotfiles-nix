@@ -18,6 +18,7 @@
         ../../modules/nixos/laptop.nix
         ../../modules/nixos/firewall.nix
         ../../modules/nixos/timesync.nix
+        ../../modules/nixos/startup-optimization-tweaks.nix
         # ../../modules/nixos/auto-disk-mount.nix
         # ../../modules/nixos/opengl.nix
         # ../../modules/nixos/auto-upgrade.nix
