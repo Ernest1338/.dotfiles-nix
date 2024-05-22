@@ -49,7 +49,7 @@
     };
 
     # support for AMD gpu
-    boot.initrd.kernelModules = [ "amdgpu" ];
+    # boot.initrd.kernelModules = [ "amdgpu" ];
 
     system.stateVersion = "23.11";
 }
