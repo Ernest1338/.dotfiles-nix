@@ -5,7 +5,7 @@
             "$mod" = "ALT";
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
-            "$screenshot" = "grim -g \"$(slurp)\" \"$HOME/Pictures/$(date +%Y%m%d-%H%M%S).png\"";
+            "$screenshot" = "SCREENSHOT_PATH=\"$HOME/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S).png\"; grim -g \"$(slurp)\" \"$SCREENSHOT_PATH\"; wl-copy < $SCREENSHOT_PATH";
             general = {
                 border_size = 0; # 1
                 gaps_in = 2;
