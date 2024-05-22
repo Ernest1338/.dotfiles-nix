@@ -88,18 +88,24 @@
                 "$mod, F, togglefloating"
                 "$mod, P, exec, $menu"
                 "$mod, Space, exec, $menu"
-                "$mod, Left, focusmonitor, -1"
-                "$mod, Right, focusmonitor, +1"
                 # "Alt, Tab, cyclenext"
                 # "Alt, Tab, bringactivetotop"
                 "$mod, Tab, focuscurrentorlast"
-                "$mod, L, exec, hyprlock --immediate"
+                "$mod Shift, L, exec, hyprlock --immediate"
                 ", Print, exec, $screenshot"
+
+                "$mod, h, focusmonitor, -1"
+                "$mod, l, focusmonitor, +1"
 
                 "$mod, left, movefocus, l"
                 "$mod, right, movefocus, r"
                 "$mod, up, movefocus, u"
                 "$mod, down, movefocus, d"
+
+                "$mod Ctrl, h, resizeactive, -10 0"
+                "$mod Ctrl, l, resizeactive, 10 0"
+                "$mod Ctrl, k, resizeactive, 0 -10"
+                "$mod Ctrl, j, resizeactive, 0 10"
             ]
             ++ (
                 # workspaces
