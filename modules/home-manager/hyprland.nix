@@ -102,10 +102,10 @@
                 "$mod, up, movefocus, u"
                 "$mod, down, movefocus, d"
 
-                "$mod Ctrl, h, resizeactive, -10 0"
-                "$mod Ctrl, l, resizeactive, 10 0"
-                "$mod Ctrl, k, resizeactive, 0 -10"
-                "$mod Ctrl, j, resizeactive, 0 10"
+                "$mod Shift, Left, resizeactive, -10 0"
+                "$mod Shift, Right, resizeactive, 10 0"
+                "$mod Shift, Up, resizeactive, 0 -10"
+                "$mod Shift, Down, resizeactive, 0 10"
             ]
             ++ (
                 # workspaces
