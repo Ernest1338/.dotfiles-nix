@@ -7,7 +7,7 @@
             "vim" = "nvim";
             "pyserv" = "python3 -m http.server 8080";
             "c" = "cd";
-            "gc" = "sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-env --delete-generations old";
+            "gc" = "nix-env --delete-generations old && nix-store --gc";
             "up" = "~/.dotfiles/update.sh; rustup update";
             "alpvm" = "sudo systemd-nspawn -q -x -D ~/Files/Containers/alpine";
             "gamingcont" = "sudo systemd-nspawn -q -D ~/Files/Containers/gaming -E DISPLAY=$DISPLAY -E XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR --bind=/dev/input --bind=/dev/dri --bind=/dev/shm --bind=/run/dbus/system_bus_socket --bind=/tmp/.X11-unix --bind=/dev/snd -E PULSE_SERVER=unix:$XDG_RUNTIME_DIR/pulse/native --bind=$XDG_RUNTIME_DIR --bind=$HOME/.config/pulse/cookie:/home/gamer/.config/pulse/cookie"; # -u gamer --bind=/etc/machine-id
