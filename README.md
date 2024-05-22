@@ -18,3 +18,5 @@ reboot
 - If neovim has broken treesitter parsers, see :checkhealth nvim-treesitter and install them
   using `:TSInstall lang`
 - Instead of `nix-shell -p neofetch` use `nix shell nixpkgs#neofetch`
+- Browser YT fullscreen exit bug (loses fullscreen in hyprland window) https://reddit.com/r/hyprland/comments/1cy5zxw/browse_exits_full_screen/
+- After unlock with hyprland current window doesn't regain focus
