@@ -91,16 +91,19 @@
                 # "Alt, Tab, cyclenext"
                 # "Alt, Tab, bringactivetotop"
                 "$mod, Tab, focuscurrentorlast"
-                "$mod Shift, L, exec, hyprlock --immediate"
+                "Ctrl Shift, L, exec, hyprlock --immediate"
                 ", Print, exec, $screenshot"
 
-                "$mod, h, focusmonitor, -1"
-                "$mod, l, focusmonitor, +1"
+                "$mod, H, focusmonitor, -1"
+                "$mod, L, focusmonitor, +1"
 
-                "$mod, left, movefocus, l"
-                "$mod, right, movefocus, r"
-                "$mod, up, movefocus, u"
-                "$mod, down, movefocus, d"
+                "$mod Shift, H, movewindow, -1"
+                "$mod Shift, L, movewindow, +1"
+
+                "$mod, Left, movefocus, l"
+                "$mod, Right, movefocus, r"
+                "$mod, Up, movefocus, u"
+                "$mod, Down, movefocus, d"
 
                 "$mod Shift, Left, resizeactive, -10 0"
                 "$mod Shift, Right, resizeactive, 10 0"
