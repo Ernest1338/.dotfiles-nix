@@ -7,7 +7,7 @@
         fd
         ncdu
         git
-        neovim
+        neovim-unwrapped
         tmux
 
         # [[ might want to diverge configs from here ]]
