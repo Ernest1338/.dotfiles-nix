@@ -91,7 +91,7 @@
                 # "Alt, Tab, cyclenext"
                 # "Alt, Tab, bringactivetotop"
                 "$mod, Tab, focuscurrentorlast"
-                "Ctrl Shift, L, exec, hyprlock --immediate"
+                "$mod Ctrl Shift, L, exec, hyprlock --immediate"
                 ", Print, exec, $screenshot"
 
                 "$mod, H, focusmonitor, -1"
