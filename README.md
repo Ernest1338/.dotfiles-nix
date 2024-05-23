@@ -14,6 +14,8 @@ sudo nixos-rebuild switch --cores $(nproc) --flake .#CONFIGURATION_NAME
 reboot
 ```
 
+Setup swapfile https://nixos.wiki/wiki/Swap
+
 ## Notes
 - If neovim has broken treesitter parsers, see :checkhealth nvim-treesitter and install them
   using `:TSInstall lang`
