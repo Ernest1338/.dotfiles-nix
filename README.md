@@ -7,7 +7,7 @@ Warsaw, No GUI, allow unfree
 ```sh
 nmtui # IF WIRELESS
 nix-shell -p git
-git clone https://github.com/Ernest1338/.dotfiles ~/.dotfiles
+git clone https://github.com/Ernest1338/.dotfiles-nix ~/.dotfiles
 cd ~/.dotfiles
 sudo nixos-generate-config --show-hardware-config > ./hosts/$(hostname)/hardware-configuration.nix
 sudo nixos-rebuild switch --cores $(nproc) --flake .#CONFIGURATION_NAME
