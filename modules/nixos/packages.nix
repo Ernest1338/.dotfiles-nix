@@ -29,7 +29,7 @@
         slurp
 
         # [[ others ]]
-        python3
+        python312Full
         python312Packages.python-lsp-server
         uv
         rustup
@@ -41,6 +41,8 @@
         mpv
         lazygit
         lua-language-server
+        python312Packages.tkinter
+        tk
         # udiskie
         # pcmanfm
         # adwaita-qt
