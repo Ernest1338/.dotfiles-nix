@@ -43,6 +43,7 @@
         lua-language-server
         python312Packages.tkinter
         tk
+        gcc
         # udiskie
         # pcmanfm
         # adwaita-qt
